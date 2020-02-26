@@ -11,7 +11,6 @@ class Cheese(TimeStampedModel):
         SEMI_HARD = "semi-hard", "Semi-Hard"
         HARD = "hard", "Hard"
 
-    
     name = models.CharField("Name of Chees", max_length=255)
     slug = AutoSlugField("Cheese Address",
                          unique=True, always_update=False, populate_from="name")
@@ -20,4 +19,3 @@ class Cheese(TimeStampedModel):
 
     def __str__(self):
         return self.name
-    
